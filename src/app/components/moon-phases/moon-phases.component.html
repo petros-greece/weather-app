@@ -1,7 +1,9 @@
-<div class="flex-col justify-items-center">
+<div class="flex flex-col items-center gap-6 bg-blue-500 bg-opacity-30 rounded-xl p-4">
 	<div class="moon-container">
 		<div class="moon" [ngStyle]="{ 'clip-path': getMoonClipPath(moonPhase) }"></div>
 	</div>
-	<div>{{moonPhaseDescription}}</div>
-	<div>{{nextFoolMoon | date: 'fullDate' }}</div>
+	<!-- <div>{{moonPhaseDescription}}</div> -->
+	<div>
+		{{nextFoolMoon | date: 'EEEE, MMMM d' }}
+	</div>
 </div>

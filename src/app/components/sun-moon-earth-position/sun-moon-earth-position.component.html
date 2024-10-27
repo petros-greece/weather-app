@@ -1,13 +1,13 @@
-<div class="sky-container rounded-2xl flex items-center justify-center" 
+<div class="relative overflow-hidden flex items-center justify-center bg-blue-500 bg-opacity-30 rounded-xl" 
     [ngStyle]="containerStyles">
-    <div class="planet-path" [ngStyle]="planetPathStyles"></div>
+    <div class="absolute rounded-full border-2 border-dashed border-blue-500" [ngStyle]="planetPathStyles"></div>
     <div 
-        class="planet sprite" 
+        class="planet sprite absolute bottom-0 left-0 transition-transform duration-500 ease-linear" 
         [ngClass]="planetIcon" 
         [style.transform]="planetPosition"
         [ngStyle]="planetStyles">
     </div>
-    <!-- <div class="planet-duration">{{duration}}</div> -->
-    <div class="planet-start-time" [style.left]="(options.planetSize+5)+'px'">{{ start }}</div>
-    <div class="planet-end-time" [style.right]="(options.planetSize+5)+'px'">{{ end }}</div>
+    <!-- <div class="planet-duration font-bold text-lg">{{duration}}</div>  -->
+    <div class="absolute bottom-0" [style.left]="(options.planetSize+5)+'px'">{{ start }}</div>
+    <div class="absolute bottom-0" [style.right]="(options.planetSize+5)+'px'">{{ end }}</div>
 </div>

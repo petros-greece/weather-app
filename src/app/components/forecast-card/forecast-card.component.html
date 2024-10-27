@@ -5,8 +5,7 @@
 	<div class="flex flex-row px-1">
 		<div 
 			*ngFor="let hour of forecastHours;index as i"
-			class="flex flex-col w-1/6 gap-y-1 items-center mx-1 p-1 font-semibold text-gray-300 rounded-lg"
-			[ngClass]="info.isDay ? 'bg-blue-950' : 'bg-opacity-50'">
+			class="flex flex-col w-1/6 gap-y-1 items-center mx-1 p-1 font-semibold text-gray-300 rounded-lg bg-blue-950">
 			{{ hour.datetime }}
 			<div class="w-12 h-12">
 				<div class="sprite" [ngClass]="'icon-day-'+(hour.sky)"></div>  
@@ -25,7 +24,7 @@
 	<div class="flex flex-row mt-2">
 		<div 
 			*ngFor="let day of forecastDays;index as i"
-			class="flex flex-col w-1/6 gap-y-1 items-center mx-1 p-1 font-semibold bg-blue-500 bg-opacity-50 rounded-lg">
+			class="flex flex-col w-1/6 gap-y-1 items-center mx-1 p-1 font-semibold text-gray-300 rounded-lg bg-blue-950">
 				{{ day.datetime }}
 			<div class="w-12 h-12">
 				<div class="sprite" [ngClass]="'icon-weather-'+(day.sky)"></div>  

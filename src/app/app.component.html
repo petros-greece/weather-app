@@ -1,7 +1,7 @@
 <div 
   *ngIf="info.dayLength > 0" 
   class="flex flex-col min-h-screen items-center place-content-center py-4"
-  [ngClass]="info.isDay ? 'bg-blue-300' : 'bg-blue-950 text-gray-300'">
+  [ngClass]="info.isDay ? 'bg-blue-200' : 'bg-blue-950 text-gray-300'">
 
   <app-main-info 
     [info]="{temperature: info.temperature, city: info.city, country: info.country, isDay: info.isDay}">
@@ -11,7 +11,7 @@
   </app-forecast-card>
 
   <app-sun-moon-earth-position
-    class="mt-5"
+    class="mt-10"
     [options]="{size: 130, planetSize: 40}" 
     [info]="{sunrise: info.sunrise, sunset: info.sunset, dayLength: info.dayLength, isDay: info.isDay}">
   </app-sun-moon-earth-position>

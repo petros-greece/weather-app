@@ -56,7 +56,7 @@ export class AppComponent implements OnInit{
   }
 
   private checkIfIsDay(sunrise: Date, sunset: Date){
-    const now = (new Date()).getTime() - 1000*60*60*18;
+    const now = (new Date()).getTime()// - 1000*60*60*18;
     if ( now >= sunrise.getTime() && now <= sunset.getTime() ) {
       this.info.isDay = true;
     }

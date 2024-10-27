@@ -1,0 +1,42 @@
+<div class="flex flex-col gap-y-5 pb-5 mt-2 items-center bg-blue-500 bg-opacity-30 rounded-2xl">
+	
+	<div class="bg-gray-500 bg-opacity-30 w-full text-center rounded-t-2xl p-2">TODAY'S FORECAST</div>
+	
+	<div class="flex flex-row px-1">
+		<div 
+			*ngFor="let hour of forecastHours;index as i"
+			class="flex flex-col w-1/6 gap-y-1 items-center mx-1 p-1 font-semibold text-gray-300 rounded-lg"
+			[ngClass]="info.isDay ? 'bg-blue-950' : 'bg-opacity-50'">
+			{{ hour.datetime }}
+			<div class="w-12 h-12">
+				<div class="sprite" [ngClass]="'icon-day-'+(hour.sky)"></div>  
+			</div>
+			<div class="text-xs " [ngClass]="info.isDay ? 'text-sky-200' : 'text-blue-400'">
+				{{ hour.moisture }}%
+			</div> 
+			<div>
+				{{ hour.temperature }}°
+			</div>  
+		</div>
+	</div>
+
+	<div class="bg-gray-500 bg-opacity-30 w-full text-center p-2">WEEKLY FORECAST</div>
+
+	<div class="flex flex-row mt-2">
+		<div 
+			*ngFor="let day of forecastDays;index as i"
+			class="flex flex-col w-1/6 gap-y-1 items-center mx-1 p-1 font-semibold bg-blue-500 bg-opacity-50 rounded-lg">
+				{{ day.datetime }}
+			<div class="w-12 h-12">
+				<div class="sprite" [ngClass]="'icon-weather-'+(day.sky)"></div>  
+			</div>
+			<div class="text-xs" [ngClass]="info.isDay ? 'text-sky-700' : 'text-blue-400'">
+				{{ day.moisture }}%
+			</div> 
+			<div class="text-center">
+				{{ day.temperatureMin }}° <br> {{ day.temperatureMax }}°
+			</div>  
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,11 @@
+<div class="flex flex-col items-center">
+
+    <div class="text-6xl ml-4">{{info.temperature}}°</div>
+    <div>
+      {{info.city}}/{{info.country}}
+    </div>
+    <div class="w-12 h-12">
+      <div class="sprite" [ngClass]="info.isDay ? 'icon-day-clear' : 'icon-night-clear'"></div>
+    </div>
+
+  </div>

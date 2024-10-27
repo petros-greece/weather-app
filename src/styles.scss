@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.sprite {
+    /* The sprite will take up the entire container's width and height */
+    width: 100%;
+    height: 100%;
+    /* Ensure the entire sprite sheet is loaded, adjusted to fit the container */
+    background-image: url('assets/weather-icons.png'); /* Use your image URL */ 
+    /* Dynamically set the background size to the scaled size of the entire sprite sheet */
+    background-size: 800% 800%; /* Keep the original sprite size */
+    /* Optional for better visual rendering */
+    background-repeat: no-repeat;
+  }
+  
+
+  .icon-night-clear{ background-position: 0% 0%; }
+  .icon-night-cloudy{ background-position: 0% 14.2857%; }
+  .icon-night-rain{ background-position: 0% 28.5714%; }
+  .icon-night-storm{ background-position: 0% 42.8571%; }
+  .icon-night-snow{ background-position: 0% 57.1429%; }
+  .icon-night-snowstorm{ background-position: 0% 71.4286%; }
+
+  .icon-day-clear{ background-position: 14.2875% 0%; }
+  .icon-day-cloudy{ background-position: 14.2875% 14.2857%; }
+  .icon-day-rain{ background-position: 14.2875% 28.5714%; }
+  .icon-day-storm{ background-position: 14.2875% 42.8571%; }
+  .icon-day-snow{ background-position: 14.2875% 57.1429%; }
+  .icon-day-snowstorm{ background-position: 14.2875% 71.4286%; }
+
+  .icon-weather-clear{ background-position: 28.5714% 0%; }
+  .icon-weather-cloudy{ background-position: 28.5714% 14.2857%; }
+  .icon-weather-rain{ background-position: 28.5714% 28.5714%; }
+  .icon-weather-storm{ background-position: 28.5714% 42.8571%; }
+  .icon-weather-snow{ background-position: 28.5714% 57.1429%; }
+  .icon-weather-snowstorm{ background-position: 28.5714% 71.4286%; }
+
+  
+  /* First Row */
+  .sprite-1  { background-position: 0% 0%; }
+  .sprite-2  { background-position: 14.2857% 0%; }
+  .sprite-3  { background-position: 28.5714% 0%; }
+  .sprite-4  { background-position: 0% 14.2857%; }
+  .sprite-5  { background-position: 14.2857% 14.2857%; }
+  .sprite-6  { background-position: 28.5714% 14.2857%; }
+
+
+  // .sprite-4  { background-position: 42.8571% 0%; }
+  // .sprite-5  { background-position: 57.1429% 0%; }
+  // .sprite-6  { background-position: 71.4286% 0%; }
+  .sprite-7  { background-position: 85.7143% 0%; }
+  .sprite-8  { background-position: 100% 0%; }   /* Last cell of row 1 */
+  
+  /* Second Row */
+  // .sprite-9  { background-position: 0% 14.2857%; }
+  // .sprite-10 { background-position: 14.2857% 14.2857%; }
+  // .sprite-11 { background-position: 28.5714% 14.2857%; }
+  .sprite-12 { background-position: 42.8571% 14.2857%; }
+  .sprite-13 { background-position: 57.1429% 14.2857%; }
+  .sprite-14 { background-position: 71.4286% 14.2857%; }
+  .sprite-15 { background-position: 85.7143% 14.2857%; }
+  .sprite-16 { background-position: 100% 14.2857%; }   /* Last cell of row 2 */
+  
+  /* Third Row */
+  .sprite-17 { background-position: 0% 28.5714%; }
+  .sprite-18 { background-position: 14.2857% 28.5714%; }
+  .sprite-19 { background-position: 28.5714% 28.5714%; }
+  .sprite-20 { background-position: 42.8571% 28.5714%; }
+  .sprite-21 { background-position: 57.1429% 28.5714%; }
+  .sprite-22 { background-position: 71.4286% 28.5714%; }
+  .sprite-23 { background-position: 85.7143% 28.5714%; }
+  .sprite-24 { background-position: 100% 28.5714%; }   /* Last cell of row 3 */
+  
+  /* Fourth Row */
+  .sprite-25 { background-position: 0% 42.8571%; }
+  .sprite-26 { background-position: 14.2857% 42.8571%; }
+  .sprite-27 { background-position: 28.5714% 42.8571%; }
+  .sprite-28 { background-position: 42.8571% 42.8571%; }
+  .sprite-29 { background-position: 57.1429% 42.8571%; }
+  .sprite-30 { background-position: 71.4286% 42.8571%; }
+  .sprite-31 { background-position: 85.7143% 42.8571%; }
+  .sprite-32 { background-position: 100% 42.8571%; }   /* Last cell of row 4 */
+  
+  /* Fifth Row */
+  .sprite-33 { background-position: 0% 57.1429%; }
+  .sprite-34 { background-position: 14.2857% 57.1429%; }
+  .sprite-35 { background-position: 28.5714% 57.1429%; }
+  .sprite-36 { background-position: 42.8571% 57.1429%; }
+  .sprite-37 { background-position: 57.1429% 57.1429%; }
+  .sprite-38 { background-position: 71.4286% 57.1429%; }
+  .sprite-39 { background-position: 85.7143% 57.1429%; }
+  .sprite-40 { background-position: 100% 57.1429%; }   /* Last cell of row 5 */
+  
+  /* Sixth Row */
+  .sprite-41 { background-position: 0% 71.4286%; }
+  .sprite-42 { background-position: 14.2857% 71.4286%; }
+  .sprite-43 { background-position: 28.5714% 71.4286%; }
+  .sprite-44 { background-position: 42.8571% 71.4286%; }
+  .sprite-45 { background-position: 57.1429% 71.4286%; }
+  .sprite-46 { background-position: 71.4286% 71.4286%; }
+  .sprite-47 { background-position: 85.7143% 71.4286%; }
+  .sprite-48 { background-position: 100% 71.4286%; }   /* Last cell of row 6 */
+  
+  /* Seventh Row */
+  .sprite-49 { background-position: 0% 85.7143%; }
+  .sprite-50 { background-position: 14.2857% 85.7143%; }
+  .sprite-51 { background-position: 28.5714% 85.7143%; }
+  .sprite-52 { background-position: 42.8571% 85.7143%; }
+  .sprite-53 { background-position: 57.1429% 85.7143%; }
+  .sprite-54 { background-position: 71.4286% 85.7143%; }
+  .sprite-55 { background-position: 85.7143% 85.7143%; }
+  .sprite-56 { background-position: 100% 85.7143%; }   /* Last cell of row 7 */
+  
+  /* Eighth Row */
+  .sprite-57 { background-position: 0% 100%; }
+  .sprite-58 { background-position: 14.2857% 100%; }
+  .sprite-59 { background-position: 28.5714% 100%; }
+  .sprite-60 { background-position: 42.8571% 100%; }
+  .sprite-61 { background-position: 57.1429% 100%; }
+  .sprite-62 { background-position: 71.4286% 100%; }
+  .sprite-63 { background-position: 85.7143% 100%; }
+  .sprite-64 { background-position: 100% 100%; }   /* Last cell of row 8 */
+  
+  
+

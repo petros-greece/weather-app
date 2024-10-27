@@ -1,0 +1,13 @@
+<div class="sky-container rounded-2xl flex items-center justify-center" 
+    [ngStyle]="containerStyles">
+    <div class="planet-path" [ngStyle]="planetPathStyles"></div>
+    <div 
+        class="planet sprite" 
+        [ngClass]="planetIcon" 
+        [style.transform]="planetPosition"
+        [ngStyle]="planetStyles">
+    </div>
+    <!-- <div class="planet-duration">{{duration}}</div> -->
+    <div class="planet-start-time" [style.left]="(options.planetSize+5)+'px'">{{ start }}</div>
+    <div class="planet-end-time" [style.right]="(options.planetSize+5)+'px'">{{ end }}</div>
+</div>
